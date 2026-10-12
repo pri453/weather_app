@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap");
+
+:root {
+  --ink: #14213d;
+  --sky: #dfeaf2;
+  --haze: #f6f9fb;
+  --sun: #f2a541;
+  --mist: #5f7a94;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--sky);
+  color: var(--ink);
+  font-family: "Outfit", system-ui, sans-serif;
+}
+
+.app {
+  max-width: 560px;
+  margin: 0 auto;
+  padding: 32px 20px 48px;
+}
+
+.search {
+  display: flex;
+  gap: 8px;
+}
+
+.search input {
+  flex: 1;
+  padding: 12px 14px;
+  font: inherit;
+  color: var(--ink);
+  background: var(--haze);
+  border: 1px solid transparent;
+  border-radius: 8px;
+}
+
+.search input:focus,
+.search button:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.search button {
+  padding: 12px 18px;
+  font: inherit;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--sun);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.message {
+  margin: 20px 0 0;
+  color: var(--mist);
+}
+
+.message.error {
+  color: #9b1c1c;
+}
+
+.now {
+  margin-top: 40px;
+}
+
+.city {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--mist);
+}
+
+.temp {
+  margin: 0;
+  font-size: 8rem;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.condition {
+  margin: 4px 0 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.details {
+  display: flex;
+  gap: 32px;
+  margin: 28px 0 0;
+}
+
+.details dt {
+  font-size: 0.875rem;
+  color: var(--mist);
+}
+
+.details dd {
+  margin: 2px 0 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.forecast {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin-top: 40px;
+  background: var(--haze);
+  border-radius: 12px;
+}
+
+.day {
+  padding: 16px 10px;
+  text-align: center;
+}
+
+.day + .day {
+  border-left: 1px solid var(--sky);
+}
+
+.day p {
+  margin: 0;
+}
+
+.day-name {
+  font-weight: 600;
+}
+
+.day-condition {
+  min-height: 2.6em;
+  margin-top: 6px !important;
+  font-size: 0.8rem;
+  color: var(--mist);
+}
+
+.day-temps {
+  margin-top: 8px !important;
+  font-weight: 600;
+}
+
+.day-temps span {
+  font-weight: 400;
+  color: var(--mist);
+}
+
+@media (max-width: 480px) {
+  .temp {
+    font-size: 6rem;
+  }
+
+  .forecast {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
