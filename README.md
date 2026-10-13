@@ -1,16 +1,35 @@
-# React + Vite
+# Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A weather app built with React and Vite. It shows current conditions and a 5-day forecast for any city.
 
-Currently, two official plugins are available:
+**Live demo:** https://weather-app-gwku.vercel.app/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Weather App screenshot](screenshot.png)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Search for any city
+- Current temperature, feels-like temperature, humidity and wind speed
+- Weather condition description
+- 5-day forecast with daily high and low temperatures
+- Shows Pune by default when the app opens
+- Loading message while data is fetched
+- Clear error messages for an unknown city or a network problem
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React (Hooks: `useState`, `useEffect`)
+- Vite
+- CSS
+- [Open-Meteo](https://open-meteo.com/) forecast and geocoding APIs (no API key needed)
+
+## Run Locally
+
+```bash
+git clone https://github.com/pri453/weather_app.git
+cd weather_app
+npm install
+npm run dev
+```
+
+Then open the local address shown in the terminal.
